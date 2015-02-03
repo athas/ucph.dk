@@ -82,7 +82,7 @@
   </head>
 
   <body>
-   <div style="margin: auto;">
+   <div id="venstre" style="float: left; width: 50%">
     <h1>Underlige Cyklende Pandaers Herligheder</h1>
 
     <p>
@@ -100,13 +100,16 @@
     </p>
 
 <script>
-$('#panda').click(function() { $(this).animate({"width" : "3000px"}, 3600000);});
+$( document ).ready(function(){$('#panda').animate({"width" : "6000px" , 
+                                                    "top" : "0px" , 
+                                                    }, 1800000);});
 </script>
     <p style="font-size: 10px;">
       CC
       BY-SA <a href="http://commons.wikimedia.org/wiki/File:Giant_Panda_eating_Bamboo.JPG">http://commons.wikimedia.org/wiki/File:Giant_Panda_eating_Bamboo.JPG</a>
     </p>
-
+</div>
+<div id="hoejre" style="float: right; width: 50%">
 <h1 style="font-family:monospace;">
 Danmarks Største DIKU-chat? 
 </h1>
@@ -122,9 +125,8 @@ Danmarks Største DIKU-chat?
       liste med projektforslag</a></li>
   <li>...eller skriv til din yndlingsunderviser</li>
 </ul>
-
-  <div id="jquery_jplayer_1" class="jp-jplayer" ></div>
-<div id="jp_container_1" class="jp-audio" role="application" aria-label="media player" style="bottom:10px; margin: auto;">
+  <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+<div id="jp_container_1" class="jp-audio" role="application" aria-label="media player" style="float:left;">
   <p style="margin:4% 0% 0% 5%;">Vi tilbyder spindelradio, unikt udvalgt af UCPHs kuratorer</p>
 	<div class="jp-type-playlist">
 		<div class="jp-gui jp-interface">
@@ -166,7 +168,7 @@ Danmarks Største DIKU-chat?
 		</div>
 	</div>
 </div>
-
+</div>
 </div>
   </body>
 </html>
