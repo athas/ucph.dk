@@ -85,13 +85,13 @@
     return [nh,nw];
     }
 
-function animateDiv(){
+function animateDiv(obj){
     var newq = makeNewPosition();
-    var oldq = $('.a').offset();
+    var oldq = obj.offset();
     var speed = calcSpeed([oldq.top, oldq.left], newq);
 
-    $('.a').animate({ top: newq[0], left: newq[1] }, speed, function(){
-      animateDiv();
+    obj.animate({ top: newq[0], left: newq[1] }, speed, function(){
+      animateDiv(obj);
     });
 
 };
@@ -135,7 +135,7 @@ function calcSpeed(prev, next) {
     </p>
 
 <script>
-$('#panda').click(function() { $( this ).slideUp(); });
+$('#panda').click(function() { animateDiv(this); });
 </script>
     <p style="font-size: 10px;">
       CC
