@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+  <head>
+    <title>UCPH</title>
+    <meta charset="UTF-8">
+    <link href="./jplayer/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="./jplayer/jquery.min.js"></script>
+    <script type="text/javascript" src="./jplayer/jquery.jplayer.js"></script>
+    <script type="text/javascript" src="./jplayer/jplayer.playlist.js"></script>
+    <script type="text/javascript" src="./js/jQueryRotate.js"></script>
+    <script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+
+	new jPlayerPlaylist({
+		jPlayer: "#jquery_jplayer_1",
+		cssSelectorAncestor: "#jp_container_1"
+	}, [
+                {
+			title:"DR P1",
+			mp3:"http://live-icy.gss.dr.dk:8000/A/A03H.mp3"
+		},
+                {
+			title:"DR P2",
+			mp3:"http://live-icy.gss.dr.dk:8000/A/A04H.mp3" , 
+			poster:".image/Giant_Panda_eating_Bamboo.JPG"
+		},
+		{
+			title:"DR P4 Midt & Vest",
+			mp3:"http://live-icy.gss.dr.dk:8000/A/A09H.mp3"
+		},
+		{
+			title:"DR P6 Beat",
+			mp3:"http://live-icy.gss.dr.dk:8000/A/A29H.mp3"
+		},
+    	{
+			title:"Pop FM",
+			mp3:"http://stream.popfm.dk/pop128"
+		},
+        {
+			title:"Radio 24syv",
+			mp3:"http://rrr.sz.xlcdn.com/?account=Radio24syv&file=ENC1_Android64&type=live&service=icecast&protocol=http&port=8000&output=pls"
+		},		
+                {
+			title:"Radio Alfa (Skive)",
+			mp3:"http://netradio.radioalfa.dk/skive"
+		},
+
+                {
+			title:"Radio Alfa (Østjylland)",
+			mp3:"http://netradio.radioalfa.dk/"
+		},
+{
+			title:"Radio Monte Carlo",
+			mp3:"http://shoutcast.unitedradio.it:1103/;stream.mp3"
+		},
+		{
+			title:"Radio Monte Carlo 2",
+			mp3:"http://shoutcast.unitedradio.it:1107/;stream.mp3"
+		},
+		{
+			title:"Radio Riviera",
+			mp3:"http://rivieraradio.ice.infomaniak.ch:80/rivieraradio-high"
+		},
+		{
+			title:"STROM:KRAFT",
+			mp3:"http://stream.stromkraftradio.fm:8012/;stream.mp3"
+		},
+	], {
+		swfPath: "./jplayer",
+		supplied: "oga, mp3",
+		wmode: "window",
+		useStateClassSkin: true,
+		autoBlur: false,
+		smoothPlayBar: true,
+		keyEnabled: true
+	});
+
+
+
+
+});
+//]]>
+</script>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+
+  <body>
+   <div style="margin: auto;">
+    <h1>Underlige Cyklende Pandaers Herligheder</h1>
+
+    <p>
+      Hej og velkommen til hjemmesiden for vores forening, hvis initialer
+      på <strong>ingen måde</strong> har sammenfald med nogen anden
+      organisation.
+    </p>
+    <p>
+      Vi opretter snart en Kickstarter for at få nok penge til at designe et
+      logo.
+    </p>
+    <p>
+      <img src="./image/Giant_Panda_eating_Bamboo.JPG"
+           alt="Panda siger velkommen" title="Panda siger velkommen" id="panda" onclick="$('#panda').rotate(45);"/>
+    </p>
+    <p style="font-size: 10px;">
+      CC
+      BY-SA <a href="http://commons.wikimedia.org/wiki/File:Giant_Panda_eating_Bamboo.JPG">http://commons.wikimedia.org/wiki/File:Giant_Panda_eating_Bamboo.JPG</a>
+    </p>
+
+<h1 style="font-family:monospace;">
+Danmarks Største DIKU-chat? 
+</h1>
+<p>Så skal du #ebs�ge #diku på irc.freenode.net er vært fo<p>
+<img src="./image/giphy.gif"/> 
+<a style="font-family:monospace; color: blue;" href="http://dikusjov.dk/hej-med-dig-irc/" target="_blank"> Det er lettere end du tror</a>
+
+  <div id="jquery_jplayer_1" class="jp-jplayer" ></div>
+<div id="jp_container_1" class="jp-audio" role="application" aria-label="media player" style="bottom:10px; margin: auto;">
+  <p style="margin:4% 0% 0% 5%;">Vi tilbyder spindelradio, unikt udvalgt af UCPHs kuratorer</p>
+	<div class="jp-type-playlist">
+		<div class="jp-gui jp-interface">
+			<div class="jp-controls">
+				<button class="jp-previous" role="button" tabindex="0">previous</button>
+				<button class="jp-play" role="button" tabindex="0">play</button>
+				<button class="jp-next" role="button" tabindex="0">next</button>
+				<button class="jp-stop" role="button" tabindex="0">stop</button>
+			</div>
+			<div class="jp-progress">
+				<div class="jp-seek-bar">
+					<div class="jp-play-bar"></div>
+				</div>
+			</div>
+			<div class="jp-volume-controls">
+				<button class="jp-mute" role="button" tabindex="0">mute</button>
+				<button class="jp-volume-max" role="button" tabindex="0">max volume</button>
+				<div class="jp-volume-bar">
+					<div class="jp-volume-bar-value"></div>
+				</div>
+			</div>
+			<div class="jp-time-holder">
+				<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+				<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+			</div>
+			<div class="jp-toggles">
+				<button class="jp-repeat" role="button" tabindex="0">repeat</button>
+				<button class="jp-shuffle" role="button" tabindex="0">shuffle</button>
+			</div>
+		</div>
+		<div class="jp-playlist">
+			<ul>
+				<li>&nbsp;</li>
+			</ul>
+		</div>
+		<div class="jp-no-solution">
+			<span>Uha!</span>
+			Fiks din JavaScript.
+		</div>
+	</div>
+</div>
+
+</div>
+  </body>
+</html>
