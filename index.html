@@ -75,41 +75,6 @@
 		smoothPlayBar: true,
 		keyEnabled: true
 	});
-
-     function makeNewPosition(){
-    // Get viewport dimensions (remove the dimension of the div)
-    var h = $(window).height() - 50;
-    var w = $(window).width() - 50;
-    var nh = Math.floor(Math.random() * h);
-    var nw = Math.floor(Math.random() * w);
-    return [nh,nw];
-    }
-
-function animateDiv(obj){
-    var newq = makeNewPosition();
-    var oldq = obj.offset();
-    var speed = calcSpeed([oldq.top, oldq.left], newq);
-
-    obj.animate({ top: newq[0], left: newq[1] }, speed, function(){
-      animateDiv(obj);
-    });
-
-};
-
-function calcSpeed(prev, next) {
-    var x = Math.abs(prev[1] - next[1]);
-    var y = Math.abs(prev[0] - next[0]);
-
-    var greatest = x > y ? x : y;
-
-    var speedModifier = 0.1;
-
-    var speed = Math.ceil(greatest/speedModifier);
-
-    return speed;
-
-}
-
 });
 //]]>
 </script>
@@ -135,7 +100,7 @@ function calcSpeed(prev, next) {
     </p>
 
 <script>
-$('#panda').click(function() { animateDiv(this); });
+$('#panda').click(function() { $(this).animate({"width","300px"}, 400);});
 </script>
     <p style="font-size: 10px;">
       CC
