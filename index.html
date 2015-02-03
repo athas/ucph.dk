@@ -131,8 +131,12 @@ function calcSpeed(prev, next) {
     </p>
     <p>
       <img src="./image/Giant_Panda_eating_Bamboo.JPG"
-           alt="Panda siger velkommen" title="Panda siger velkommen" id="panda" onclick="$('#panda').animate({width: 400px, height:400px}, 1000);"/>
+           alt="Panda siger velkommen" title="Panda siger velkommen" id="panda"/>
     </p>
+
+<script>
+$('#panda').click(function() { $( this ).slideUp(); });
+</script>
     <p style="font-size: 10px;">
       CC
       BY-SA <a href="http://commons.wikimedia.org/wiki/File:Giant_Panda_eating_Bamboo.JPG">http://commons.wikimedia.org/wiki/File:Giant_Panda_eating_Bamboo.JPG</a>
