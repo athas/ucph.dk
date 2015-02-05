@@ -1,5 +1,12 @@
-h2 {
+h1, h2 {
   font-family: monospace;
+}
+
+h1 {
+  color: #444;
+  font-style: italic;
+  font-size: 2em;
+  margin-top: 0;
 }
 
 .etabs {
@@ -63,7 +70,16 @@ h2 {
 }
 
 @keyframes panda {
-  0% {margin-left: 0;}
-  50% {margin-left: calc(100% - 256px - 10px);}
-  100% {margin-left: 0;}
+  0% {
+    margin-left: 0;
+    transform: rotate(0deg);
+  }
+  50% {
+    margin-left: calc(100% - 256px - 10px);
+    transform: rotate(360deg);
+  }
+  100% {
+    margin-left: 0;
+    transform: rotate(0deg);
+  }
 }
