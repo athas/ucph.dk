@@ -5,11 +5,15 @@
       <meta charset="UTF-8">
       <link href="style.css" rel="stylesheet" type="text/css" />
       <link href="./jplayer/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
+
+<!-- svips humør er omvendt proportionelt med antallet af Javascript-imports -->
       <script type="text/javascript" src="./jplayer/jquery.min.js"></script>
       <script type="text/javascript" src="./jplayer/jquery.jplayer.js"></script>
       <script type="text/javascript" src="./jplayer/jplayer.playlist.js"></script>
       <script type="text/javascript" src="./js/jQueryRotate.js"></script>
       <script type="text/javascript" src="./js/jquery.easytabs.js"></script>
+      <script type="text/javascript" src="./js/jquery.csvToTable.js"></script>
+
       <script type="text/javascript">
       //<![CDATA[
       $(document).ready(function(){
@@ -86,6 +90,7 @@
       <ul class="etabs">
         <li class="tab"><a target="_blank" href="#tabs1-forside">Forside</a></li>
         <li class="tab"><a target="_blank" href="#tabs1-chat">IRC-chat</a></li>
+        <li class="tab"><a target="_blank" href="#tabs1-ordbog">Ordbog</a></li>
       </ul>
 
       <div id="tabs1-forside">
@@ -277,6 +282,17 @@
       <div id="tabs1-chat">
         <iframe src="http://webchat.freenode.net?channels=diku&uio=MT1mYWxzZQ9a" width="100%" height="600px"></iframe>
       </div>
+
+      <div id="tabs1-ordbog">
+        <div id="CSVTable"></div>
+        <script>
+            $(function() {
+              $.ajaxSetup({ mimeType: "text/plain" });
+              $('#CSVTable').CSVToTable('ordbog.csv');
+              });
+        </script>
+      </div>
+
     </div>
   </body>
 </html>
