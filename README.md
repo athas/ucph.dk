@@ -1,4 +1,4 @@
 UCPH.DK
 =======
 
-Informationscentrum for dataloger og venner.
+Informationsportal for dataloger og venner.
