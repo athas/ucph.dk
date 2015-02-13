@@ -14,6 +14,7 @@
       <script type="text/javascript" src="./js/jQueryRotate.js"></script>
       <script type="text/javascript" src="./js/jquery.easytabs.js"></script>
       <script type="text/javascript" src="./js/jquery.csvToTable.js"></script>
+      <script type="text/javascript" src="./js/jquery.ba-hashchange.js"></script>
 
       <script type="text/javascript">
       //<![CDATA[
@@ -88,7 +89,10 @@
               smoothPlayBar: true,
               keyEnabled: true
             });
- $('#tab-container').easytabs();
+        $('#tab-container').easytabs({
+                        panelContext: $(document),
+                        updateHash: true
+                        });
 });
 //]]>
           </script>
