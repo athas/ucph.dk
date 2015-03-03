@@ -88,12 +88,24 @@
               autoBlur: false,
               smoothPlayBar: true,
               keyEnabled: true
-            });
+            }
+        );
         $('#tab-container').easytabs({
-                        panelContext: $(document),
-                        updateHash: true
-                        });
-});
+          panelContext: $(document),
+          updateHash: true
+        });
+
+        (function () {
+            var u = ["Urimeligt", "Usandsynligt", "Uetiskt", "Uranholdigt", "Ungarnsk", "Underligt", "Urmenneskeligt", "Ugennemtænkte"];
+            var c = ["Cirklende", "Chokerende", "Ciskønnede", "Charmerende", "Centrerede", "Camouflerede", "Caribiske", "Censurerede"];
+            var p = ["Pandas", "Pandas", "Pandas", "Pandaers"];
+            var h = ["Hemmelighed", "Huskeliste", "Havarikommision", "Habengut", "Hjemmeside", "Hemisfære", "Hengivenhed"];
+
+            var choose = function(es) { return es[Math.floor(Math.random()*es.length)]; };
+
+            $('#pagetitle').text(choose(u) + " " + choose(c) + " " + choose(p) + " " + choose(h));
+        })();
+      });
 //]]>
           </script>
           <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -108,7 +120,7 @@
 
       <div id="tabs1-forside">
         <div id="venstre" style="float: left; width: 49%;">
-          <h1>Underligt Cirklende Pandas Herligheder</h1>
+          <h1 id="pagetitle">Underligt Cirklende Pandas Herligheder</h1>
           <p>
             <img src="./image/pandahoved-cirkel.png"
                  alt="Panda siger velkommen" title="Panda siger velkommen"
