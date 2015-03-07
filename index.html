@@ -20,7 +20,7 @@
       //<![CDATA[
       $(document).ready(function(){
         new jPlayerPlaylist({
-          jPlayer: "#jquery_jplayer_1",
+          jPlayer: "#jpId",
           cssSelectorAncestor: "#jp_container_1"
           },[
             {
@@ -105,7 +105,14 @@
 
             $('#pagetitle').text(choose(u) + " " + choose(c) + " " + choose(p) + " " + choose(h));
         })();
+
+
+        $("#jpId").bind($.jPlayer.event.play , function(event){
+            kanal = $("a.jp-playlist-item.jp-playlist-current")[0].firstChild;
+            document.title = "♪ " + kanal.data + " ♪ -- UCPH"    ;
+
       });
+    });
 //]]>
           </script>
           <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -266,7 +273,7 @@
             løsen.
 
           <h2>Spindelradio</h2>
-          <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+          <div id="jpId" class="jp-jplayer"></div>
           <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player" style="float:left;">
             <p style="margin:4% 0% 0% 5%;">Vi tilbyder spindelradio, unikt udvalgt af UCPHs kuratorer</p>
             <div class="jp-type-playlist">
