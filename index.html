@@ -110,7 +110,7 @@
 
         $("#jpId").bind($.jPlayer.event.play , function(event){
             kanal = $("a.jp-playlist-current").text();
-            document.title = "♪ " + kanal + " ♪ -- UCPH";
+            document.title = kanal + " -- UCPH";
         }).bind($.jPlayer.event.pause, function () {
             // Don't buffer the radio while paused
             $(this).jPlayer("clearMedia");
