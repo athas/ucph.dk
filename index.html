@@ -96,8 +96,8 @@
           updateHash: true
         });
 
-        (function () {
-            var u = ["Urimeligt", "Usandsynligt", "Uetiskt", "Uranholdigt", "Ungarnsk", "Underligt", "Urmenneskeligt", "Ugennemtænkte"];
+        function titel() {
+            var u = ["Urimeligt", "Usandsynligt", "Uetiskt", "Uranholdigt", "Ungarnsk", "Underligt", "Urmenneskeligt", "Ugennemtænkte", "Ustyrligt", "Ungdommeligt", "Undtagelsesvist"];
             var c = ["Cirklende", "Chokerende", "Ciskønnede", "Charmerende", "Centrerede", "Camouflerede", "Caribiske", "Censurerede"];
             var p = ["Pandas", "Pandas", "Pandas", "Pandaers"];
             var h = ["Hemmelighed", "Huskeliste", "Havarikommision", "Habengut", "Hjemmeside", "Hemisfære", "Hengivenhed"];
@@ -105,8 +105,13 @@
             var choose = function(es) { return es[Math.floor(Math.random()*es.length)]; };
 
             $('#pagetitle').text(choose(u) + " " + choose(c) + " " + choose(p) + " " + choose(h));
-        })();
+        }
+        titel();
 
+
+        $(window).focus(function(){
+                  titel();
+                });
 
         $("#jpId").bind($.jPlayer.event.play , function(event){
             kanal = $("a.jp-playlist-current").text();
