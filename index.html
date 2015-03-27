@@ -3,172 +3,56 @@
   <head>
     <title>UCPH</title>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
-      <link href="style.css" rel="stylesheet" type="text/css" />
-      <link href="./jplayer/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
+    <base target="_blank">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="jplayer/jplayer.blue.monday.css" rel="stylesheet" type="text/css">
 
-<!-- svips humør er omvendt proportionelt med antallet af Javascript-imports -->
-      <script type="text/javascript" src="./jplayer/jquery.min.js"></script>
-      <script type="text/javascript" src="./jplayer/jquery.jplayer.js"></script>
-      <script type="text/javascript" src="./jplayer/jplayer.playlist.js"></script>
-      <script type="text/javascript" src="./js/jQueryRotate.js"></script>
-      <script type="text/javascript" src="./js/jquery.easytabs.js"></script>
-      <script type="text/javascript" src="./js/jquery.csvToTable.js"></script>
-      <script type="text/javascript" src="./js/jquery.ba-hashchange.js"></script>
+    <!-- svips humør er omvendt proportionelt med antallet af Javascript-imports -->
+    <script type="text/javascript" src="jplayer/jquery.min.js"></script>
+    <script type="text/javascript" src="jplayer/jquery.jplayer.js"></script>
+    <script type="text/javascript" src="jplayer/jplayer.playlist.js"></script>
+    <script type="text/javascript" src="js/jQueryRotate.js"></script>
+    <script type="text/javascript" src="js/jquery.easytabs.js"></script>
+    <script type="text/javascript" src="js/jquery.csvToTable.js"></script>
+    <script type="text/javascript" src="js/jquery.ba-hashchange.js"></script>
 
-      <script type="text/javascript">
-      //<![CDATA[
-      $(document).ready(function(){
-        var playlist = new jPlayerPlaylist({
-          jPlayer: "#jpId",
-          cssSelectorAncestor: "#jp_container_1"
-          },[
-            {
-              title:"DR P1",
-              mp3:"http://live-icy.gss.dr.dk:8000/A/A03H.mp3"
-            },
-            {
-              title:"DR P2",
-              mp3:"http://live-icy.gss.dr.dk:8000/A/A04H.mp3" ,
-            },
-            {
-              title:"DR P3",
-              mp3:"http://live-icy.gss.dr.dk:8000/A/A05H.mp3" ,
-            },
-            {
-              title:"DR P4 Midt & Vest",
-              mp3:"http://live-icy.gss.dr.dk:8000/A/A09H.mp3"
-            },
-            {
-              title:"DR P5",
-              mp3:"http://live-icy.gss.dr.dk:8000/A/A25H.mp3"
-            },
-            {
-              title:"DR P6 Beat",
-              mp3:"http://live-icy.gss.dr.dk:8000/A/A29H.mp3"
-            },
-            {
-              title:"DR P7 Mix",
-              mp3:"http://live-icy.gss.dr.dk:8000/A/A21H.mp3"
-            },
-            {
-              title:"DR P8 Jazz",
-              mp3:"http://live-icy.gss.dr.dk:8000/A/A22H.mp3"
-            },
-            {
-              title:"Pop FM",
-              mp3:"http://stream.popfm.dk/pop128"
-            },
-            {
-              title:"Radio 24syv",
-              mp3:"http://rrr.sz.xlcdn.com/?account=Radio24syv&file=ENC1_Android64&type=live&service=icecast&protocol=http&port=8000&output=pls"
-            },
-            {
-              title:"Radio Alfa (Skive)",
-              mp3:"http://netradio.radioalfa.dk/skive"
-            },
-            {
-              title:"Radio Alfa (Østjylland)",
-              mp3:"http://netradio.radioalfa.dk/"
-            },
-            {
-              title:"Radio Monte Carlo",
-              mp3:"http://shoutcast.unitedradio.it:1103/;stream.mp3"
-            },
-            {
-              title:"Radio Monte Carlo 2",
-              mp3:"http://shoutcast.unitedradio.it:1107/;stream.mp3"
-            },
-            {
-              title:"Radio Riviera",
-              mp3:"http://rivieraradio.ice.infomaniak.ch:80/rivieraradio-high"
-            },
-            {
-              title:"STROM:KRAFT",
-              mp3:"http://stream.stromkraftradio.fm:8012/;stream.mp3"
-            },
-            ],
-            {
-              swfPath: "./jplayer",
-              supplied: "oga, mp3",
-              wmode: "window",
-              preload: "none",
-              useStateClassSkin: true,
-              autoBlur: false,
-              smoothPlayBar: true,
-              keyEnabled: true
-            }
-        );
-        $('#tab-container').easytabs({
-          panelContext: $(document),
-          updateHash: true
-        });
-
-        function titel() {
-            var u = ["Urimeligt", "Usandsynligt", "Uetiskt", "Uranholdigt", "Ungarnsk", "Underligt", "Urmenneskeligt", "Ugennemtænkte", "Ustyrligt", "Ungdommeligt", "Undtagelsesvist", "Uniformt"];
-            var c = ["Cirklende", "Chokerende", "Ciskønnede", "Charmerende", "Centrerede", "Camouflerede", "Caribiske", "Censurerede","C. L. Seifert-pushende"];
-            var p = ["Pandas", "Pandas", "Pandas", "Pandaers"];
-            var h = ["Hemmelighed", "Huskeliste", "Havarikommision", "Habengut", "Hjemmeside", "Hemisfære", "Hengivenhed"];
-
-            var choose = function(es) { return es[Math.floor(Math.random()*es.length)]; };
-
-            $('#pagetitle').text(choose(u) + " " + choose(c) + " " + choose(p) + " " + choose(h));
-        }
-        titel();
-
-        $(window).focus(function(){
-                  titel();
-                  if ($("a.jp-playlist-current").text() == "DR P3"){
-                      $("#panda")[0].src = "./image/montecarlo.png";
-                      }
-                  else{$("#panda")[0].src = "./image/pandahoved-cirkel.png";
-                      }
-                });
-
-        $("#jpId").bind($.jPlayer.event.play , function(event){
-            kanal = $("a.jp-playlist-current").text();
-            document.title = kanal + " -- UCPH";
-        }).bind($.jPlayer.event.pause, function () {
-            // Don't buffer the radio while paused
-            $(this).jPlayer("clearMedia");
-            playlist.select(playlist.current);
-        });
-    });
-//]]>
-          </script>
-          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript">
+      $(document).ready(startup);
+    </script>
   </head>
   <body>
     <div id="tab-container" class="tab-container">
       <ul class="etabs">
-        <li class="tab"><a target="_blank" href="#tabs1-forside">Forside</a></li>
-        <li class="tab"><a target="_blank" href="#tabs1-chat">IRC-chat</a></li>
-        <li class="tab"><a target="_blank" href="#tabs1-kalender">Kalender</a></li>
-        <li class="tab"><a target="_blank" href="#tabs1-ordbog">Ordbog</a></li>
+        <li class="tab"><a href="#tabs1-forside" target="_self">Forside</a></li>
+        <li class="tab"><a href="#tabs1-chat" target="_self">IRC-chat</a></li>
+        <li class="tab"><a href="#tabs1-kalender" target="_self">Kalender</a></li>
+        <li class="tab"><a href="#tabs1-ordbog" target="_self">Ordbog</a></li>
       </ul>
 
       <div id="tabs1-forside">
-        <div id="venstre" style="float: left; width: 49%;">
-          <h1 id="pagetitle">Underligt Cirklende Pandas Herligheder</h1>
+        <div id="forside-venstre">
+          <h1 id="pagetitle"><a name="tabs1-forside">Underligt Cirklende Pandas Herligheder</a></h1>
           <p>
             <img src="./image/pandahoved-cirkel.png"
                  alt="Panda siger velkommen" title="Panda siger velkommen"
-                 id="panda" />
+                 id="panda">
           </p>
           <p>
             Hej og velkommen til hjemmesiden for vores forening, hvis initialer
             på <strong>ingen måde</strong> har sammenfald med nogen anden
             organisation.
           </p>
-          <p style="font-size: 10px;">
-            Billede: <a target="_blank"href="http://commons.wikimedia.org/wiki/File:Giant_Panda_eating_Bamboo.JPG">http://commons.wikimedia.org/wiki/File:Giant_Panda_eating_Bamboo.JPG</a>
+          <p class="small">
+            Billede: <a href="http://commons.wikimedia.org/wiki/File:Giant_Panda_eating_Bamboo.JPG">http://commons.wikimedia.org/wiki/File:Giant_Panda_eating_Bamboo.JPG</a>
             under CC BY-SA.
           </p>
 
           <h2>Danmarks Største DIKU-chat?</h2>
           <p>
             Det er #diku på irc.freenode.net.  Klik på "IRC-chat" oppe
-            i højre hjørne eller læs <a target="_blank"
+            i højre hjørne eller læs <a 
             href="http://dikusjov.dk/hej-med-dig-irc/">IRC-guiden</a>,
             eller <a href="https://www.youtube.com/watch?v=O2rGTXHvPCQ">dette
             uddrag fra et dokumentarprogram om IRC</a>.  UCPH's
@@ -177,63 +61,144 @@
 
           <h2>Sociale foreninger på DIKU</h2>
           <ul>
-            <li><a target="_blank"href="http://rkg.diku.dk">Ruskursusgruppen</a> (og <a href="https://github.com/RusKursusGruppen">på Github)</li>
-            <li><a target="_blank"href="http://dikurevy.dk">DIKUrevyen</a>
-              (<a target="_blank"href="https://www.youtube.com/user/DIKUrevy/videos">videoer på YouTube</a>, <a target="_blank"href="http://møder.dikurevy.dk/">mødekalender</a>, <a href="https://github.com/dikurevy/Public-Archive">arkiver</a>).</li>
-            <li><a target="_blank"href="http://kantinen.org/">Kantinen</a>
-              (<a target="_blank"href="http://hygge.kantinen.org/">styring af hyggedatamaten</a>)</li>
-            <li><a target="_blank"href="https://www.facebook.com/fagraad">Datalogisk Fagråd
-                på Facebook</a> (og på email: <tt>fagraad@dikumail.dk</tt>)</li>
-            <li><a target="_blank"href="http://pwnies.dk/">Hackergruppen Pwnies</a></li>
-            <li><a target="_blank"href="http://dikulan.dk/">DIKULAN</a></li>
-            <li><a target="_blank"href="http://dqbrew.dk/">DIKUs bryggerforening</a></li>
-            <li><a target="_blank"href="https://www.facebook.com/groups/dikuanime/">DIKU anime</a></li>
-            <li><a target="_blank"href="http://dikultur.dk">Dikultur</a></li>
-            <li><a target="_blank"href="https://www.facebook.com/groups/diconbraetspil/">DICON (brætspil)</a></li>
+            <li>
+              <a href="http://rkg.diku.dk">Ruskursusgruppen</a>
+              (og <a href="https://github.com/RusKursusGruppen">på Github</a>)
+            </li>
+            <li>
+              <a href="http://dikurevy.dk">DIKUrevyen</a>
+              (<a href="https://www.youtube.com/user/DIKUrevy/videos">videoer på
+              YouTube</a>, <a href="http://møder.dikurevy.dk/">mødekalender</a>
+              og <a href="https://github.com/dikurevy/Public-Archive">arkiver</a>)
+            </li>
+            <li>
+              <a href="http://kantinen.org/">Kantinen</a>
+              (<a href="http://hygge.kantinen.org/">styring af
+              hyggedatamaten &mdash; vi skal lige købe en ny en først</a>)
+            </li>
+            <li>
+              <a href="https://www.facebook.com/fagraad">Datalogisk Fagråd
+                på Facebook</a> (og på email: <code>fagraad@dikumail.dk</code>)
+            </li>
+            <li>
+              <a href="http://pwnies.dk/">Hackergruppen Pwnies</a>
+            </li>
+            <li>
+              <a href="http://dikulan.dk/">DIKULAN</a>
+            </li>
+            <li>
+              <a href="http://dqbrew.dk/">DIKUs bryggerforening</a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/groups/dikuanime/">DIKU
+              anime</a>
+            </li>
+            <li>
+              <a href="http://dikultur.dk">Dikultur</a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/groups/diconbraetspil/">DICON
+              (brætspil)</a>
+            </li>
           </ul>
 
           <h2>Genveje til KUs funktionaliteter</h2>
           <ul>
-            <li><a target="_blank"href="https://www2.adm.ku.dk/ticketsso/!cas_ticket.frontpage?language=da&p_logintype=ad&p_serviceid=4" target="_blank" >Absalon</li>
-            <li><a target="_blank"href="   https://www2.adm.ku.dk/ticketsso/!cas_ticket.frontpage?language=da&p_logintype=ad&p_serviceid=40" target="_blank">Selvbetjening</a></li>
-            <li><a target="_blank"href=" https://www2.adm.ku.dk/ticketsso/!cas_ticket.frontpage?language=da&p_logintype=ad&p_serviceid=43" target="_blank">STADS</a></li>
-            <li><a target="_blank"href="http://webprint.science.ku.dk/">Udskriv på KUs printere</a> (altså, <strong>sådan printer du nemmest på DIKU</strong>)</li>
-            <li><a target="_blank"href="http://kurser.ku.dk/#q=&education=&programme=&volume=&departments=DEPARTMENT_0011&faculty=&studyBlockId=null&teachingLanguage=&period=&schedules=&studyId=&openUniversity=0&searched=1">Liste over alle datalogikurser</a></li>
+            <li>
+              <a href="https://www2.adm.ku.dk/ticketsso/!cas_ticket.frontpage?language=da&p_logintype=ad&p_serviceid=4">Absalon</a>
+            </li>
+            <li>
+              <a href="https://www2.adm.ku.dk/ticketsso/!cas_ticket.frontpage?language=da&p_logintype=ad&p_serviceid=40">Selvbetjening</a>
+            </li>
+            <li>
+              <a href="https://www2.adm.ku.dk/ticketsso/!cas_ticket.frontpage?language=da&p_logintype=ad&p_serviceid=43">STADS</a>
+            </li>
+            <li>
+              <a href="http://webprint.science.ku.dk/">Udskriv på KUs
+              printere</a> (altså, <strong>sådan printer du nemmest på
+              DIKU</strong>)
+            </li>
+            <li>
+              <a href="http://kurser.ku.dk/#q=&education=&programme=&volume=&departments=DEPARTMENT_0011&faculty=&studyBlockId=null&teachingLanguage=&period=&schedules=&studyId=&openUniversity=0&searched=1">Liste
+              over alle datalogikurser</a>
+            </li>
           </ul>
 
           <h2>Gratis ting til studerende</h2>
           <ul>
-            <li><a target="_blank"href="https://education.github.com/pack">En masse ting fra Github (inkl. private depoter)</a></li>
-            <li>Gratis Microsoft-proskrammel gennem det
-              mundrette <strong>DreamSpark Premium</strong> - opret en post
-              på <a target="_blank"href="http://servicedesk.ku.dk">KU
-              Servicedesk</a>, hvor du skriver at du er studerende på DIKU og
-              gerne vil have adgang til DreamSpark Premium.</li>
-            <li><a target="_blank"
-              href="https://www.jetbrains.com/student/">JetBrains:</a>
-              Integreret udviklingsmiljø'er for masser af
-              programmeringssprog (PyCharm, IntelliJ IDEA osv.).</li>
-            <li>Gratis <a target="_blank" href="http://www.autodesk.com"><strong>Autodesk</strong></a>-programmel for studerende.</li>
-            <li><a target="_blank" href="http://www.mecenat.dk/">Samling af studierabatter online (fx 20% på Western Digital)</a></li>
+            <li>
+              <a href="https://education.github.com/pack">En masse ting fra
+              Github (inkl. private depoter)</a>
+            </li>
+            <li>
+              Gratis Microsoft-proskrammel gennem det
+              mundrette <strong>DreamSpark Premium</strong> &mdash; opret en post
+              på <a href="http://servicedesk.ku.dk">KU Servicedesk</a>, hvor du
+              skriver at du er studerende på DIKU og gerne vil have adgang til
+              DreamSpark Premium.
+            </li>
+            <li>
+              <a href="https://www.jetbrains.com/student/">JetBrains:</a>
+              Integreret udviklingsmiljø'er for masser af programmeringssprog
+              (PyCharm, IntelliJ IDEA osv.)
+            </li>
+            <li>
+              Gratis <a href="http://www.autodesk.com"><strong>Autodesk</strong></a>-programmel
+              for studerende.
+            </li>
+            <li>
+              <a href="http://www.mecenat.dk/">Samling af studierabatter online
+              (fx 20% på Western Digital)</a>
+            </li>
           </ul>
-		  <h2>Undervisningsmateriale til årgang '14</h2>
-		  En spejlning af det meste af undervisningsmaterialet til de aktuelle kurser for årgang '14 findes på <a target="_blank" href="http://2014.diku.eu"><strong>2014.diku.eu</strong></a>.
-          <h2>Bidrag</h2>
-          <tt>ucph.dk</tt>
-          er <a href="https://github.com/Athas/ucph.dk">på Github</a>,
-          så det er nemt at bidrage med mere indhold.  Hvert bidrag
-          (om det er så lidt som at rette en stavefejl) belønnes med
-          et bolsje sponseret af
-          fagforeningen <a href="http://prosa.dk">PROSA</a> og
-          Fagrådet.
-       </div>
 
-        <div id="hoejre" style="float: right; width: 49%;">
+          <h2>DIKUs EDB-anlæg</h2>
+          <p>
+            Som datalogistuderende kan du logge ind
+            på <code>ask.diku.dk</code>, <code>brok.diku.dk</code>
+            og <code>tyr.diku.dk</code> &mdash;
+            brug <a href="http://en.wikipedia.org/wiki/Secure_Shell">SSH</a>
+            (<a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">SSH-klient
+            til Windows</a>,
+            <a href="https://help.ubuntu.com/community/SSH/OpenSSH/ConnectingTo">SSH-vejledning
+            til Unix/Linux</a>), og log ind med din KU-nummerplade og løsen.
+          </p>
+
+          <h2>Hvis du leder efter et (bachelor|kandidat)?projekt</h2>
+          <ul>
+            <li>
+              <a href="http://hiperfit.dk/studentprojects.html">HIPERFITs liste
+            med projektforslag</a>
+            </li>
+            <li>
+              ...eller skriv til din yndlingsunderviser
+            </li>
+          </ul>
+
+          <h2>Undervisningsmateriale til årgang '14</h2>
+          <p>
+            En spejlning af det meste af undervisningsmaterialet til de aktuelle
+            kurser for årgang '14 findes
+            på <a href="http://2014.diku.eu"><strong>2014.diku.eu</strong></a>.
+          </p>
+
+          <h2>Bidrag</h2>
+          <p>
+            <code>ucph.dk</code>
+            er <a href="https://github.com/Athas/ucph.dk">på Github</a>,
+            så det er nemt at bidrage med mere indhold.  Hvert bidrag
+            (om det er så lidt som at rette en stavefejl) belønnes med
+            et bolsje sponseret af
+            fagforeningen <a href="http://prosa.dk">PROSA</a> og
+            Fagrådet.
+          </p>
+        </div>
+
+        <div id="forside-hoejre">
           <h2>Nøgledata om DIKU</h2>
           <p>
             <em>Sidst opdateret d. 4. februar 2015.</em>
           </p>
-
           <p>
             Den midlertidige institutleder er <strong>Jørgen Bansler</strong>,
             viceinstitutleder for forskning er <strong>Jakob Grue</strong>,
@@ -241,16 +206,14 @@
             Erleben</strong>, viceinstitutleder for innovation
             er <strong>Stephen Alstrup</strong>.
           </p>
-
           <p>
             Mere væsentligt, så
-            er <a target="_blank"href="http://www.diku.dk/~torbenm/"><strong>Torben
+            er <a href="http://www.diku.dk/~torbenm/"><strong>Torben
                 Mogensen</strong></a> undervisningsleder for bacheloruddannelsen,
-            og <a target="_blank"href="http://www.diku.dk/hjemmesider/ansatte/andrzej/"><strong>Andrzej
+            og <a href="http://www.diku.dk/hjemmesider/ansatte/andrzej/"><strong>Andrzej
                 Filinski</strong></a> leder for kandidatuddannelsen.  Skriv til dem
             hvis du har et studierelateret problem eller spørgsmål.
           </p>
-
           <p>
             Der blev i 2014 optaget lidt over 160 studerende på
             bacheloruddannelsen.  DIKU er beliggende i Universitetsparken 1
@@ -260,73 +223,61 @@
             (HCC-gruppen).
           </p>
 
-          <a target="_blank" href="https://www.youtube.com/watch?v=vgiDcJi534Y"
+          <a href="https://www.youtube.com/watch?v=vgiDcJi534Y"
              style="float: right; margin-right: 10%">
-            <img src="./image/giphy.gif"/>
+            <img src="image/giphy.gif" alt="Dansende dinosaurus">
           </a>
 
           <h2>Kursustilmelding</h2>
-
-          Kursustilmelding foregår to gange om året.  Tilmelding til
-          kurser i <em>blok 1 og 2</em> foregår i de to uger op til
-          1. juni, og tilmelding til <em>blok 3 og 4</em> er i de to
-          uger op til 1. december
-          (<a href="http://kuur.ku.dk/indremarked/skemastruktur/faellesfrister/faelles-frister.pdf">kilde</a>).
-          Tilmelding foregår på <a href="http://kunet.dk">KUnet</a>,
-          under <em>Selvbetjening</em>, <em>Indskrivning, Undervisning
-          &amp; Eksamen</em>, <em>Undervisning</em>.
+          <p>
+            Kursustilmelding foregår to gange om året.  Tilmelding til kurser
+            i <em>blok 1 og 2</em> foregår i de to uger op til d.  1. juni, og
+            tilmelding til <em>blok 3 og 4</em> er i de to uger op til
+            d. 1. december
+            (<a href="http://kuur.ku.dk/indremarked/skemastruktur/faellesfrister/faelles-frister.pdf">kilde</a>).
+            Tilmelding foregår på <a href="http://kunet.dk">KUnet</a>,
+            under <em>Selvbetjening</em>, <em>Indskrivning, Undervisning &amp;
+            Eksamen</em>, <em>Undervisning</em>.
+          </p>
 
           <h2>Eksamenstilmelding</h2>
-
-          Du er automatisk tilmeldt eksamen for det tilsvarende
-          kursus.  Eksamen ligger typisk i de sidste to uger af
-          blokken, efter syv ugers undervisning, men ikke altid.
-
-          <h2>Hvis du leder efter et (bachelor|kandidat)?projekt</h2>
-          <ul>
-            <li><a target="_blank"href="http://hiperfit.dk/studentprojects.html">HIPERFITs liste med projektforslag</a></li>
-            <li>...eller skriv til din yndlingsunderviser</li>
-          </ul>
+          <p>
+            Du er automatisk tilmeldt eksamen for det tilsvarende kursus.
+            Eksamen ligger typisk i de sidste to uger af blokken, efter syv
+            ugers undervisning, men ikke altid.
+          </p>
 
           <h2>Trådløst Internet</h2>
-
-          Alle studerende på KU har adgang til <em>Eduroam</em>, et
-          trådløst netværk som også findes på en række andre
-          universiteter.  Du skal logge ind med
-          brugernavnet <tt><em>nummerplade</em>@ku.dk</tt>
-          (f.eks. <tt>mzd855@ku.dk</tt> hvis du er Troels), og samme
-          løsen som du bruger på KUnet.  Krypteringsindstillingerne
-          skal være CCMP, EAP-metoden PEAP og den indre autenticering
-          EAP-MSCHAPv2.  Sandsynligvis kan dit styresystem selv finde
-          ud af denne del.  På visse platforme skal <tt>@ku.dk</tt>
-          ikke skrives som del af brugernavnet, men i stedet anføres
-          som <tt>ku.dk</tt> i et <em>domain</em>-indtastningsfelt
-          eller lignende.
-
-          Hvis dit styresystem brokker sig over Eduroam's
-          sikkerhedscertifikat, så skal du blot bede det om at
-          ignorere det.  Problemet skyldes at KU signerer sine egne
-          certifikater.
-
-          Husk, at når dit KUnet-løsen ændrer sig, og det bliver du
-          tvunget til fra tid til anden, så skal du også ændre løsenet
-          for din Eduroam-forbindelse.
-
-            <h2>DIKUs EDB-anlæg</h2>
-
-            Som datalogistuderende kan du logge ind
-            på <tt>ask.diku.dk</tt>, <tt>brok.diku.dk</tt> og <tt>tyr.diku.dk</tt> -
-            brug <a href="http://en.wikipedia.org/wiki/Secure_Shell">SSH</a>
-            (<a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">SSH-klient
-            til
-            Windows</a>, <a href="https://help.ubuntu.com/community/SSH/OpenSSH/ConnectingTo">SSH-vejledning
-            til Unix/Linux</a>), og log ind med din KU-nummerplade og
-            løsen.
+          <p>
+            Alle studerende på KU har adgang til <em>Eduroam</em>, et
+            trådløst netværk som også findes på en række andre
+            universiteter.  Du skal logge ind med
+            brugernavnet <code><em>nummerplade</em>@ku.dk</code>
+            (f.eks. <code>mzd855@ku.dk</code> hvis du er Troels), og samme
+            løsen som du bruger på KUnet.  Krypteringsindstillingerne
+            skal være CCMP, EAP-metoden PEAP og den indre autenticering
+            EAP-MSCHAPv2.  Sandsynligvis kan dit styresystem selv finde
+            ud af denne del.  På visse platforme skal <code>@ku.dk</code>
+            ikke skrives som del af brugernavnet, men i stedet anføres
+            som <code>ku.dk</code> i et <em>domain</em>-indtastningsfelt
+            eller lignende.
+          </p>
+          <p>
+            Hvis dit styresystem brokker sig over Eduroam's
+            sikkerhedscertifikat, så skal du blot bede det om at
+            ignorere det.  Problemet skyldes at KU signerer sine egne
+            certifikater.
+          </p>
+          <p>
+            Husk, at når dit KUnet-løsen ændrer sig, og det bliver du
+            tvunget til fra tid til anden, så skal du også ændre løsenet
+            for din Eduroam-forbindelse.
+          </p>
 
           <h2>Spindelradio</h2>
           <div id="jpId" class="jp-jplayer"></div>
           <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player" style="float:left;">
-            <p style="margin:4% 0% 0% 5%;">Vi tilbyder spindelradio</p>
+            <p style="margin:4% 0% 0% 5%;">Vi tilbyder en fin vifte af spindelradiokanaler.</p>
             <div class="jp-type-playlist">
               <div class="jp-gui jp-interface">
                 <div class="jp-controls">
@@ -375,29 +326,25 @@
           </div>
         </div>
       </div>
+      <div class="clear"></div>
 
       <div id="tabs1-chat">
-        <iframe src="http://webchat.freenode.net?channels=diku&uio=MT1mYWxzZQ9a" width="100%" height="600px"></iframe>
+        <h1><a name="tabs1-chat">DIKUCHAT</a></h1>
+        <iframe src="http://webchat.freenode.net?channels=diku&uio=MT1mYWxzZQ9a"></iframe>
       </div>
+      
       <div id="tabs1-kalender">
-
-           TODO: flere foreninger på! der mangler: DIKULAN, FC SparC, Fagrådet, flere?
-          <!-- Rækkefølge: pwnies, RKG, Kantinen, DIKUrevy, weeknum, DIKU-kalendere -->
-          <iframe src="https://www.google.com/calendar/embed?title=%20&amp;src=djvibjf18hbptl95f3hpkrpofc%40group.calendar.google.com&amp;color=%23B1365F&amp;src=4ugt312d073fe71852rq7dss4s%40group.calendar.google.com&amp;color=%23125A12&amp;src=aa9ob64uf5bvk9avj9g3dbabm0%40group.calendar.google.com&amp;color=%2323164E&amp;src=t6e6uvai18r6ddne8ei9d5q849uighiu%40import.calendar.google.com&amp;color=%23BE6D00&amp;src=e_2_da%23weeknum%40group.v.calendar.google.com&amp;src=vh42eh838i4kbn47hlf92gj4i4%40group.calendar.google.com&amp;src=tfuoe10qmmi8132dupeb8ve82k%40group.calendar.google.com&amp;src=4fgtu4pp3ku04pr2qaedjbmjpo%40group.calendar.google.com&amp;src=vedch197chg4hkgqh555glifrk%40group.calendar.google.com&amp;src=da.danish%23holiday%40group.v.calendar.google.com"
-                  height=1000 frameborder="0" scrolling="no" style="float: left; width: 100%"></iframe>
+        <h1><a name="tabs1-kalender">DIKULENDER</a></h1>
+        <p>TODO: flere foreninger på! der mangler: DIKULAN, FC SparC, Fagrådet, flere?</p>
+        <!-- Rækkefølge: pwnies, RKG, Kantinen, DIKUrevy, weeknum, DIKU-kalendere -->
+        <iframe src="https://www.google.com/calendar/embed?title=%20&amp;src=djvibjf18hbptl95f3hpkrpofc%40group.calendar.google.com&amp;color=%23B1365F&amp;src=4ugt312d073fe71852rq7dss4s%40group.calendar.google.com&amp;color=%23125A12&amp;src=aa9ob64uf5bvk9avj9g3dbabm0%40group.calendar.google.com&amp;color=%2323164E&amp;src=t6e6uvai18r6ddne8ei9d5q849uighiu%40import.calendar.google.com&amp;color=%23BE6D00&amp;src=e_2_da%23weeknum%40group.v.calendar.google.com&amp;src=vh42eh838i4kbn47hlf92gj4i4%40group.calendar.google.com&amp;src=tfuoe10qmmi8132dupeb8ve82k%40group.calendar.google.com&amp;src=4fgtu4pp3ku04pr2qaedjbmjpo%40group.calendar.google.com&amp;src=vedch197chg4hkgqh555glifrk%40group.calendar.google.com&amp;src=da.danish%23holiday%40group.v.calendar.google.com"
+        scrolling="no"></iframe>
       </div>
-
 
       <div id="tabs1-ordbog">
+        <h1><a name="tabs1-ordbog">DIKURDBOG</a></h1>
         <div id="CSVTable"></div>
-        <script>
-            $(function() {
-              $.ajaxSetup({ mimeType: "text/plain" });
-              $('#CSVTable').CSVToTable('ordbog.csv');
-              });
-        </script>
       </div>
-
     </div>
   </body>
 </html>
