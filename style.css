@@ -104,6 +104,7 @@ ul {
   width: 256px;
   height: 256px;
   animation: panda 3s infinite;
+  -webkit-animation: panda 3s infinite;
 }
 
 @keyframes panda {
@@ -118,6 +119,21 @@ ul {
   100% {
     margin-left: 0;
     transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes panda {
+  0% {
+    margin-left: 0;
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    margin-left: calc(100% - 256px - 10px);
+    -webkit-transform: rotate(360deg);
+  }
+  100% {
+    margin-left: 0;
+    -webkit-transform: rotate(0deg);
   }
 }
 
