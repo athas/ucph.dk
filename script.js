@@ -60,6 +60,10 @@ function startup() {
         mp3:"http://live-icy.gss.dr.dk:8000/A/A22H.mp3"
       },
       {
+        title:"HeartBeats",
+        mp3:"http://airtime.heartbeats.dk:8000/stream"
+      },
+      {
         title:"Pop FM",
         mp3:"http://stream.popfm.dk/pop128"
       },
