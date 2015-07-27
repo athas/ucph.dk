@@ -80,12 +80,6 @@ function startup() {
         mp3:"http://netradio.radioalfa.dk/"
       },
       {
-        title:"Radio Italo",
-        mp3:"http://213.239.206.179:8088/;stream/1"
-      },
-      
-      
-      {
         title:"Radio Monte Carlo",
         mp3:"http://shoutcast.unitedradio.it:1103/;stream.mp3"
       },
