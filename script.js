@@ -72,10 +72,6 @@ function startup() {
         mp3:"http://rrr.sz.xlcdn.com/?account=Radio24syv&file=ENC1_Android64&type=live&service=icecast&protocol=http&port=8000&output=pls"
       },
       {
-        title:"Radio Alfa (Skive)",
-        mp3:"http://netradio.radioalfa.dk/skive"
-      },
-      {
         title:"Radio Alfa (Østjylland)",
         mp3:"http://netradio.radioalfa.dk/"
       },
