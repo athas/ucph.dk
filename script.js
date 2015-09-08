@@ -91,6 +91,10 @@ function startup() {
         title:"STROM:KRAFT",
         mp3:"http://stream.stromkraftradio.fm:8012/;stream.mp3"
       },
+      {
+        title:"VRT Radio 2 Antwerpen",
+        mp3:"http://mp3.streampower.be/ra2ant-high"
+      }
       ],
       {
         swfPath: "./jplayer",
