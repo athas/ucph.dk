@@ -7,7 +7,7 @@ function set_pagetitle() {
            "C. L. Seifert-pushende", "Chokoladedryppende"];
   var p = ["Pandas", "Pandas", "Pandas", "Pandaers"];
   var h = ["Hemmelighed", "Huskeliste", "Havarikommision", "Habengut",
-           "Hjemmeside", "Hemisfære", "Hengivenhed", "Hurlumhhejseri"];
+           "Hjemmeside", "Hemisfære", "Hengivenhed", "Hurlumhejseri"];
     
   var choose = function(es) { return es[Math.floor(Math.random()*es.length)]; };
 
