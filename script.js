@@ -1,14 +1,14 @@
 function set_pagetitle() {
   var u = ["Urimeligt", "Usandsynligt", "Uetiskt", "Uranholdigt", "Ungarnsk",
-           "Underligt", "Urmenneskeligt", "Ugennemtænkte", "Ustyrligt", 
+           "Underligt", "Urmenneskeligt", "Ugennemtænkte", "Ustyrligt",
            "Ungdommeligt", "Undtagelsesvist", "Uniformt", "Uregerligt"];
-  var c = ["Cirklende", "Chokerende", "Ciskønnede", "Charmerende", 
+  var c = ["Cirklende", "Chokerende", "Ciskønnede", "Charmerende",
            "Centrerede", "Camouflerede", "Caribiske", "Censurerede",
            "C. L. Seifert-pushende", "Chokoladedryppende"];
   var p = ["Pandas", "Pandas", "Pandas", "Pandaers"];
   var h = ["Hemmelighed", "Huskeliste", "Havarikommision", "Habengut",
            "Hjemmeside", "Hemisfære", "Hengivenhed", "Hurlumhejseri"];
-    
+
   var choose = function(es) { return es[Math.floor(Math.random()*es.length)]; };
 
   $('#pagetitle').text(choose(u) + " " + choose(c) + " " + choose(p) + " " + choose(h));
@@ -123,7 +123,7 @@ function startup() {
 
   // Set a random pagetitle.
   set_pagetitle();
-  
+
   // Generate and show the dictionary from ordbog.csv.
   show_dictionary();
 
