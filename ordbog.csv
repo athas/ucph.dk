@@ -29,6 +29,7 @@ Fremmedord, Korrekte danske betegnelse, evt. forklaring
 "Harddisk", Fastpladelager,
 "Hardware", Maskinel,
 "Hashtag", Gullashetiket,
+"Hashtable", Hakketabel,
 "Information Technology|IT", Elektronisk Databehandling (edb),
 "Keyboard", Tastatur,
 "Laptop", Mappedatamat,
@@ -47,7 +48,7 @@ Fremmedord, Korrekte danske betegnelse, evt. forklaring
 "Plain text", Råtekst,
 "Printer", Linjeskriver,
 "Proprietary software", Proprietært programmel,
-"Pound sign", "Bøftegn, Gullashglyf, Röschtirune", (jf. hashtag)
+"Pound sign", "Bøftegn, Gullashglyf, Havelåge, Röschtirune", (jf. hashtag)
 "Pull (changes)", Hal,
 "Push (changes)", Puf,
 "Quick Response Code eller QR Code", Prikkode,
