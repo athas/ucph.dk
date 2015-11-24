@@ -92,6 +92,10 @@ function startup() {
         mp3:"http://stream.stromkraftradio.fm:8012/;stream.mp3"
       },
       {
+        title:"The Lake",
+        mp3:"http://efterklang-sc.djj.dk:8000/"
+      },
+      {
         title:"VRT Radio 2 Antwerpen",
         mp3:"http://mp3.streampower.be/ra2ant-high"
       }
