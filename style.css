@@ -1,9 +1,14 @@
+body {
+    background: #333333;
+    color: #eeeeee;
+}
+
 h1, h2 {
   font-family: monospace;
 }
 
 h1 {
-  color: #444;
+  color: #cccccc;
   font-style: italic;
   font-size: 2em;
   margin: 0;
@@ -56,7 +61,7 @@ ul {
   display: inline-block;
   zoom: 1;
   *display: inline;
-  background: #eee;
+  background: #333333;
   border: solid 1px #999;
   border-bottom: none;
   -moz-border-radius: 4px 4px 0 0;
@@ -76,7 +81,7 @@ ul {
 }
 
 .tab.active {
-  background: #fff;
+  background: #000000;
   padding-top: 6px;
   position: relative;
   top: 1px;
@@ -88,7 +93,7 @@ ul {
 }
 
 .tab-container .panel-container {
-  background: #fff;
+  background: #000000;
   border: solid #666 1px;
   padding: 10px;
   -moz-border-radius: 0 4px 4px 4px;
@@ -138,15 +143,21 @@ ul {
 }
 
 :link {
-  color: #666;
+  color: #999999;
   font-weight: bold;
   text-decoration: none;
 }
 
 table a:visited {
-  color: #999999;
+  color: #666666;
   font-weight:bold;
   text-decoration:none;
+}
+
+a:visited {
+  color: #93007C;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 table a:active, table a:hover {
