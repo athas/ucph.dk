@@ -93,7 +93,7 @@ function startup() {
       },
       {
         title:"The Lake",
-        mp3:"http://efterklang-sc.djj.dk:8000/"
+        mp3:"http://efterklang-sc.djj.dk:8000/;stream.mp3"
       },
       {
         title:"VRT Radio 2 Antwerpen",
