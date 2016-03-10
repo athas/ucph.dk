@@ -76,8 +76,8 @@ function startup() {
         mp3:"http://netradio.radioalfa.dk/"
       },
       {
-        title:"Radio Monte Carlo",
-        mp3:"http://shoutcast.unitedradio.it:1103/;stream.mp3"
+        title:"Radio Monte Carlo FM",
+        mp3:"http://icecast.unitedradio.it:80/rmc.mp3"
       },
       {
         title:"Radio Monte Carlo 2",
