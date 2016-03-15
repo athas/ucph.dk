@@ -69,7 +69,7 @@ function startup() {
       },
       {
         title:"Radio 24syv",
-        mp3:"http://rrr.sz.xlcdn.com/?account=Radio24syv&file=ENC1_Android64&type=live&service=icecast&protocol=http&port=8000&output=pls"
+          mp3:"http://ice.cr1.streamzilla.xlcdn.com:8000/sz=Radio24syv=ENC1_Web128?token=327fa9433da8731258661b70bc9131a7&time=56e7f15b"
       },
       {
         title:"Radio Alfa (Østjylland)",
