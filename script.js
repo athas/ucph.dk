@@ -77,11 +77,11 @@ function startup() {
       },
       {
         title:"Radio Monte Carlo FM",
-        mp3:"http://icecast.unitedradio.it:80/rmc.mp3"
+        mp3:"http://icecast.105.net/RMC.mp3"
       },
       {
         title:"Radio Monte Carlo 2",
-        mp3:"http://shoutcast.unitedradio.it:1107/;stream.mp3"
+        mp3:"http://icecast.unitedradio.it/MC2.mp3"
       },
       {
         title:"Radio Riviera",
