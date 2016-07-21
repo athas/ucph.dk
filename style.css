@@ -1,6 +1,6 @@
 body {
-    background: #333333;
-    color: #eeeeee;
+  background: #2A3429;
+  color: #eeeeee;
 }
 
 h1, h2 {
@@ -142,23 +142,23 @@ ul {
   }
 }
 
-:link {
-  color: #999999;
+a:link {
+  color: #AD9EFF;
   font-weight: bold;
   text-decoration: none;
-}
-
-table a:visited {
-  color: #666666;
-  font-weight:bold;
-  text-decoration:none;
 }
 
 a:visited {
-  color: #93007C;
+  color: #7F6C8C;
   font-weight: bold;
   text-decoration: none;
 }
+
+.etabs a:visited {
+  color: #AD9EFF;
+}
+
+/* Ordbog */
 
 table a:active, table a:hover {
   color: #bd5a35;
