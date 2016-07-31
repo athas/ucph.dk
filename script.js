@@ -11,7 +11,7 @@ function set_pagetitle() {
 
   var choose = function(es) { return es[Math.floor(Math.random()*es.length)]; };
 
-  $('#pagetitle').text(choose(u) + " " + choose(c) + " " + choose(p) + " " + choose(h));
+  $('#pagetitle').html(choose(u) + " " + choose(c) + "<br>" + choose(p) + " " + choose(h));
 }
 
 function show_dictionary() {

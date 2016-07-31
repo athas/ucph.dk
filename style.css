@@ -4,18 +4,24 @@ body {
   font-family: sans;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: monospace;
 }
 
 h1 {
   color: #cccccc;
   font-style: italic;
-  font-size: 2em;
+  font-size: 3em;
   margin: 0;
 }
 
 h2 {
+  font-size: 2em;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.5em;
   margin: 0;
 }
 
@@ -38,6 +44,10 @@ ul {
 #forside-venstre {
   float: left;
   width: 49%;
+}
+
+#pagetitle {
+  text-align: center;
 }
 
 #forside-hoejre {
