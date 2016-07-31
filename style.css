@@ -1,6 +1,7 @@
 body {
-  background: #2A3429;
+  background: #6F0900;
   color: #eeeeee;
+  font-family: sans;
 }
 
 h1, h2 {
@@ -261,42 +262,63 @@ table tr:hover td {
 }
 
 .overlay {
-    position:fixed;
-    width:100%;
-    height:100%;
-    background:rgba(100, 100,100, 0.9);
-    top: 0px;
-    left: 0px;
-    display: table;
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(100, 100,100, 0.9);
+  top: 0px;
+  left: 0px;
+  display: table;
+}
+
+.centered-box-helper {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
 }
 
 .centered-box {
-    width: 80%;
-    margin: 0 auto;
-    padding: 25px;
-    background: gray;
-    border-radius: 25px;
-}
-.helper {
-  display: table-cell;
-  vertical-align: middle;
-}
-.centered-box p{
-    
+  white-space: nowrap;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: #444444;
+  font-weight: bold;
+  border-radius: 25px;
 }
 
 .knap {
-                 border-radius: 20px;
+  border-radius: 15px;
+  padding: 10px;
+  margin-left: 15px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.knap:first-child {
+  margin-left: 0;
 }
 
 .groen {
-    background: green;
+  background-color: #009101;
+}
+
+.groen:hover {
+  background-color: #00C501;
 }
 
 .roed {
-    background: red;
+  background-color: #910000;
+}
+
+.roed:hover {
+  background-color: #C40000;
 }
 
 .blaa {
-    background: blue;
+  background-color: #000091;
+}
+
+.blaa:hover {
+  background-color: #0000C4;
 }
