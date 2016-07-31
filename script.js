@@ -140,4 +140,21 @@ function startup() {
               else{$("#panda")[0].src = "./image/pandahoved-cirkel.png";
                   }
             });
+
+    if (Cookies.get("vis_ikke_slide") != undefined){
+        $("#ny_slide_overlay").remove();
+    }
+    else {
+        $("#ja-knap").click(function(){
+            $("#ny_slide_overlay").remove();
+            window.location.href = "#tabs1-ny-paa-diku";
+            });
+
+        $("#nej-knap").click(function(){
+            $("#ny_slide_overlay").remove();
+        });
+        $("#aldrig-knap").click(function(){
+            Cookies.set("vis_ikke_slide", "en værdi", {expires: 365});
+        });
+    }
 }

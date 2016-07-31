@@ -259,3 +259,44 @@ table tr:hover td {
   background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
   background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);
 }
+
+.overlay {
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:rgba(100, 100,100, 0.9);
+    top: 0px;
+    left: 0px;
+    display: table;
+}
+
+.centered-box {
+    width: 80%;
+    margin: 0 auto;
+    padding: 25px;
+    background: gray;
+    border-radius: 25px;
+}
+.helper {
+  display: table-cell;
+  vertical-align: middle;
+}
+.centered-box p{
+    
+}
+
+.knap {
+                 border-radius: 20px;
+}
+
+.groen {
+    background: green;
+}
+
+.roed {
+    background: red;
+}
+
+.blaa {
+    background: blue;
+}
