@@ -1,20 +1,28 @@
 body {
-  background: #2A3429;
-  color: #eeeeee;
+  background: #373737;
+  color: rgb(212,219,211);
+  font-family: sans;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: monospace;
+  color: rgb(240, 213, 165);
 }
 
 h1 {
-  color: #cccccc;
+  color: rgb(200,141, 8);
   font-style: italic;
-  font-size: 2em;
+  font-size: 3em;
   margin: 0;
 }
 
 h2 {
+  font-size: 2em;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.5em;
   margin: 0;
 }
 
@@ -39,6 +47,10 @@ ul {
   width: 49%;
 }
 
+#pagetitle {
+  text-align: center;
+}
+
 #forside-hoejre {
   float: right;
   width: 49%;
@@ -49,6 +61,11 @@ ul {
   width: 100%;
   height: 800px;
   border: none;
+}
+
+#tabs1-ny-paa-diku {
+  width: 50em;
+  margin: 0 auto;
 }
 
 .etabs {
@@ -143,7 +160,7 @@ ul {
 }
 
 a:link {
-  color: #AD9EFF;
+  color: rgb(200,141, 8);
   font-weight: bold;
   text-decoration: none;
 }
@@ -258,4 +275,66 @@ table tr:hover td {
   background: #f2f2f2;
   background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
   background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);
+}
+
+.overlay {
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(100, 100,100, 0.9);
+  top: 0px;
+  left: 0px;
+  display: table;
+}
+
+.centered-box-helper {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.centered-box {
+  white-space: nowrap;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: #444444;
+  font-weight: bold;
+  border-radius: 25px;
+}
+
+.knap {
+  border-radius: 15px;
+  padding: 10px;
+  margin-left: 15px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.knap:first-child {
+  margin-left: 0;
+}
+
+.groen {
+  background-color: #009101;
+}
+
+.groen:hover {
+  background-color: #00C501;
+}
+
+.roed {
+  background-color: #910000;
+}
+
+.roed:hover {
+  background-color: #C40000;
+}
+
+.blaa {
+  background-color: #000091;
+}
+
+.blaa:hover {
+  background-color: #0000C4;
 }
