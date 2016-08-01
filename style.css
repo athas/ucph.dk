@@ -164,7 +164,7 @@ ul {
 }
 
 a:link {
-  color: rgb(200,141, 8);
+  color: #4976FF;
   font-weight: bold;
   text-decoration: none;
 }
@@ -176,7 +176,7 @@ a:visited {
 }
 
 .etabs a:visited {
-  color: #AD9EFF;
+  color: #4976FF;
 }
 
 /* Ordbog */
