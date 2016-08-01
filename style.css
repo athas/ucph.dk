@@ -26,6 +26,10 @@ h3 {
   margin: 0;
 }
 
+.italics{
+    font-style: italic;
+}
+
 p {
   margin-top: 0.2em;
 }
