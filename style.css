@@ -1,15 +1,16 @@
 body {
-  background: #6F0900;
-  color: #eeeeee;
+  background: #373737;
+  color: rgb(212,219,211);
   font-family: sans;
 }
 
 h1, h2, h3 {
   font-family: monospace;
+  color: rgb(240, 213, 165);
 }
 
 h1 {
-  color: #cccccc;
+  color: rgb(200,141, 8);
   font-style: italic;
   font-size: 3em;
   margin: 0;
@@ -159,7 +160,7 @@ ul {
 }
 
 a:link {
-  color: #AD9EFF;
+  color: rgb(200,141, 8);
   font-weight: bold;
   text-decoration: none;
 }
