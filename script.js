@@ -15,6 +15,11 @@ function set_pagetitle() {
 }
 
 function show_dictionary() {
+  $("#tabs1-ordbog").html(`
+    <h1><a name="tabs1-ordbog">DIKURDBOG</a></h1>
+    <div id="CSVTable"></div>
+    `);
+
   $(function() {
       $.ajaxSetup({ mimeType: "text/plain" });
       $('#CSVTable').CSVToTable('ordbog.csv');
