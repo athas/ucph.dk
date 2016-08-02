@@ -141,20 +141,45 @@ function startup() {
                   }
             });
 
-    if (Cookies.get("vis_ikke_slide") != undefined){
-        $("#ny_slide_overlay").remove();
-    }
-    else {
-        $("#ja-knap").click(function(){
-            $("#ny_slide_overlay").remove();
-            window.location.href = "#tabs1-ny-paa-diku";
-            });
+  // Handle rus introduction.
+  if (Cookies.get("vis_ikke_slide") == undefined){
+    var overlay_html = `
+      <div class="overlay" id="ny_slide_overlay">
+      <div class="centered-box-helper">
+        <div class="centered-box">
+          <h1>Velkommen til UCPH.dk!</h1>
+          <p>
+            Vi har oprettet en underside beregnet til nye studerende
+            på DIKU.  Vil du se den?
+          </p>
+          <p>
+            <a class="knap groen" id="ja-knap">
+              Ja tak, det lyder dejligt
+            </a>
+            <a class="knap roed" id="nej-knap">
+              Nej, det gider jeg ikke
+            </a>
+            <a class="knap blaa" id="aldrig-knap">
+              Nej, og spørg mig ikke igen
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    `;
+    $(document.body).append(overlay_html);
 
-        $("#nej-knap").click(function(){
-            $("#ny_slide_overlay").remove();
-        });
-        $("#aldrig-knap").click(function(){
-            Cookies.set("vis_ikke_slide", "en værdi", {expires: 365});
-        });
-    }
+    $("#ja-knap").click(function() {
+      $("#ny_slide_overlay").remove();
+      window.location.href = "#tabs1-ny-paa-diku";
+    });
+
+    $("#nej-knap").click(function() {
+      $("#ny_slide_overlay").remove();
+    });
+
+    $("#aldrig-knap").click(function() {
+      Cookies.set("vis_ikke_slide", "en værdi", {expires: 365});
+    });
+  }
 }
