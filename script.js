@@ -179,6 +179,7 @@ function startup() {
     });
 
     $("#aldrig-knap").click(function() {
+      $("#ny_slide_overlay").remove();
       Cookies.set("vis_ikke_slide", "en værdi", {expires: 365});
     });
   }
