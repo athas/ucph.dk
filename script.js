@@ -103,6 +103,10 @@ function startup() {
       {
         title:"VRT Radio 2 Antwerpen",
         mp3:"http://mp3.streampower.be/ra2ant-high"
+      },
+      {
+        title:"Globus Guld (Kolding)",
+        mp3:"http://stream2.wlmm.dk/guldkoldingmp3"
       }
       ],
       {
