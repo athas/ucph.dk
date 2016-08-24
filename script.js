@@ -26,6 +26,20 @@ function show_dictionary() {
     });
 }
 
+function get_latest_commits() {
+    $.getJSON("https://api.github.com/repos/Athas/ucph.dk/commits")
+        .done(function(data) {
+            $.each(data.slice(0, 10), function(i, item) {
+                $("<li/>", {
+                    'html': $("<a/>", {
+                        'href': item.html_url,
+                        'text': item.commit.author.name + ": " + item.commit.message
+                    })}
+                 ).appendTo("#commits");
+            });
+        });
+}
+
 function startup() {
   // Setup radio.
   var playlist = new jPlayerPlaylist({
@@ -139,6 +153,8 @@ function startup() {
 
   // Generate and show the dictionary from ordbog.csv.
   show_dictionary();
+
+  get_latest_commits();
 
   // Handle focus events.
   $(window).focus(function(){
