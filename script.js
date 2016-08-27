@@ -119,6 +119,10 @@ function startup() {
         mp3:"http://efterklang-sc.djj.dk:8000/;stream.mp3"
       },
       {
+        title:"Universitetsradioen",
+        mp3:"http://netradio.universitetsradioen.dk:8000/live64.ogg"
+      },
+      {
         title:"VRT Radio 2 Antwerpen",
         mp3:"http://mp3.streampower.be/ra2ant-high"
       }
