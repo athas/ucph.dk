@@ -80,6 +80,10 @@ var channelList = [
         mp3:"http://rivieraradio.ice.infomaniak.ch:80/rivieraradio-high"
       },
       {
+        title:"Radio Viborg",
+        mp3:"http://netradio.radioviborg.dk/viborg"
+      },
+      {
         title:"STROM:KRAFT",
         mp3:"http://stream.stromkraftradio.fm:8012/;stream.mp3"
       },
