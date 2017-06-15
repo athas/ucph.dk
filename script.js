@@ -14,38 +14,7 @@ function set_pagetitle() {
   $('#pagetitle').html(choose(u) + " " + choose(c) + "<br>" + choose(p) + " " + choose(h));
 }
 
-function show_dictionary() {
-  $("#tabs1-ordbog").html(`
-    <h1><a name="tabs1-ordbog">DIKURDBOG</a></h1>
-    <div id="CSVTable"></div>
-    `);
-
-  $(function() {
-      $.ajaxSetup({ mimeType: "text/plain" });
-      $('#CSVTable').CSVToTable('ordbog.csv');
-    });
-}
-
-function get_latest_commits() {
-    $.getJSON("https://api.github.com/repos/Athas/ucph.dk/commits")
-        .done(function(data) {
-            $.each(data.slice(0, 10), function(i, item) {
-                $("<li/>", {
-                    'html': $("<a/>", {
-                        'href': item.html_url,
-                        'text': item.commit.author.name + ": " + item.commit.message
-                    })}
-                 ).appendTo("#commits");
-            });
-        });
-}
-
-function startup() {
-  // Setup radio.
-  var playlist = new jPlayerPlaylist({
-    jPlayer: "#jpId",
-    cssSelectorAncestor: "#jp_container_1"
-    },[
+var channelList = [
       {
         title:"DR P1",
         mp3:"http://live-icy.gss.dr.dk:8000/A/A03H.mp3"
@@ -92,7 +61,7 @@ function startup() {
       },
       {
         title:"Radio 24syv",
-	  mp3: "http://rrr.sz.xlcdn.com/?account=Radio24syv&file=ENC1_Web128&type=live&service=icecast&port=8000&output=pls"
+	      mp3: "http://rrr.sz.xlcdn.com/?account=Radio24syv&file=ENC1_Web128&type=live&service=icecast&port=8000&output=pls"
       },
       {
         title:"Radio Alfa (Østjylland)",
@@ -100,7 +69,7 @@ function startup() {
       },
       {
         title:"Radio Monte Carlo FM",
-        mp3:"http://icecast.105.net/RMC.mp3"
+        mp3:"http://icecast.unitedradio.it/RMC.mp3"
       },
       {
         title:"Radio Monte Carlo 2",
@@ -109,6 +78,10 @@ function startup() {
       {
         title:"Radio Riviera",
         mp3:"http://rivieraradio.ice.infomaniak.ch:80/rivieraradio-high"
+      },
+      {
+        title:"Radio Viborg",
+        mp3:"http://netradio.radioviborg.dk/viborg"
       },
       {
         title:"STROM:KRAFT",
@@ -126,24 +99,75 @@ function startup() {
         title:"VRT Radio 2 Antwerpen",
         mp3:"http://mp3.streampower.be/ra2ant-high"
       }
-      ],
-      {
-        swfPath: "./jplayer",
-        supplied: "oga, mp3",
-        wmode: "window",
-        preload: "none",
-        useStateClassSkin: true,
-        autoBlur: false,
-        smoothPlayBar: true,
-        keyEnabled: false
-      }
-  );
+];
+
+var defaultChannel =
+        {
+            title:"Radio Alfa (Østjylland)",
+            mp3:"http://netradio.radioalfa.dk/"
+        };
+
+function getParameterByName(name, url) {
+    if (!url) {
+        url = window.location.href;
+    }
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+function show_dictionary() {
+  $("#tabs1-ordbog").html(`
+    <h1><a name="tabs1-ordbog">DIKURDBOG</a></h1>
+    <div id="CSVTable"></div>
+    `);
+
+  $(function() {
+      $.ajaxSetup({ mimeType: "text/plain" });
+      $('#CSVTable').CSVToTable('ordbog.csv');
+    });
+}
+
+function get_latest_commits() {
+    $.getJSON("https://api.github.com/repos/Athas/ucph.dk/commits")
+        .done(function(data) {
+            $.each(data.slice(0, 10), function(i, item) {
+                $("<li/>", {
+                    'html': $("<a/>", {
+                        'href': item.html_url,
+                        'text': item.commit.author.name + ": " + item.commit.message
+                    })}
+                 ).appendTo("#commits");
+            });
+        });
+}
+
+function startup() {
+  // Setup radio.
+  var playlist = new jPlayerPlaylist({
+      jPlayer: "#jpId",
+      cssSelectorAncestor: "#jp_container_1",
+      swfPath: "./jplayer",
+      supplied: "oga, mp3",
+      wmode: "window",
+      preload: "none",
+      useStateClassSkin: true,
+      autoBlur: false,
+      smoothPlayBar: true,
+      keyEnabled: false
+  }, channelList);
+
+
   $('#tab-container').easytabs({
     panelContext: $(document),
     updateHash: true
   });
 
-  $("#jpId").bind($.jPlayer.event.play, function(event){
+   var jp = $("#jpId");
+    jp.bind($.jPlayer.event.play, function(event){
       var kanal = $("a.jp-playlist-current").text();
       document.title = kanal + " -- UCPH";
     }).bind($.jPlayer.event.pause, function () {
@@ -151,6 +175,25 @@ function startup() {
       $(this).jPlayer("clearMedia");
       playlist.select(playlist.current);
   });
+    var requestedChannel = getParameterByName("radio");
+    if (requestedChannel != null){
+        var flatTitle;
+        var elm;
+        var i;
+        var givenChannel = defaultChannel;
+        for (i in channelList){
+            elm = channelList[i];
+            flatTitle = elm["title"].replace(/\s/g,'').toLowerCase();
+            if (flatTitle.indexOf(requestedChannel) !== -1){
+                givenChannel = elm;
+            }
+        };
+
+        jp.bind($.jPlayer.event.play, function(event){
+                $("#jpId").jPlayer("setMedia", givenChannel)
+                .jPlayer("play");}
+               );
+    };
 
   // Set a random pagetitle.
   set_pagetitle();
@@ -212,4 +255,5 @@ function startup() {
       Cookies.set("vis_ikke_slide", "en værdi", {expires: 365});
     });
   }
+
 }
