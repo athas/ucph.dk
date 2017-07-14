@@ -10,6 +10,8 @@ Fremmedord, Korrekt dansk betegnelse, Forklaring
 "cache", "mellemlager",
 "caps lock", "skiftelås, grellås",
 "carriage return", "vognretur",
+"case", "skuffevalg",
+"case-insensitive", "skuffevalgsuafhængigt, uafhængigt af skuffevalg",
 "central Processing Unit, CPU", "central beregneenhed, central beregningsenhed",
 "closed source software", "lukket programmel",
 "cloud", "magimat",
