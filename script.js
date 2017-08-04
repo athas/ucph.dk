@@ -17,35 +17,35 @@ function set_pagetitle() {
 var channelList = [
       {
         title:"DR P1",
-        mp3:"http://live-icy.gss.dr.dk:8000/A/A03H.mp3"
+        mp3:"http://live-icy.gss.dr.dk/A/A03H.mp3"
       },
       {
         title:"DR P2",
-        mp3:"http://live-icy.gss.dr.dk:8000/A/A04H.mp3" ,
+        mp3:"http://live-icy.gss.dr.dk/A/A04H.mp3" ,
       },
       {
         title:"DR P3",
-        mp3:"http://live-icy.gss.dr.dk:8000/A/A05H.mp3" ,
+        mp3:"http://live-icy.gss.dr.dk/A/A05H.mp3" ,
       },
       {
         title:"DR P4 Midt & Vest",
-        mp3:"http://live-icy.gss.dr.dk:8000/A/A09H.mp3"
+        mp3:"http://live-icy.gss.dr.dk/A/A09H.mp3"
       },
       {
         title:"DR P5",
-        mp3:"http://live-icy.gss.dr.dk:8000/A/A25H.mp3"
+        mp3:"http://live-icy.gss.dr.dk/A/A25H.mp3"
       },
       {
         title:"DR P6 Beat",
-        mp3:"http://live-icy.gss.dr.dk:8000/A/A29H.mp3"
+        mp3:"http://live-icy.gss.dr.dk/A/A29H.mp3"
       },
       {
         title:"DR P7 Mix",
-        mp3:"http://live-icy.gss.dr.dk:8000/A/A21H.mp3"
+        mp3:"http://live-icy.gss.dr.dk/A/A21H.mp3"
       },
       {
         title:"DR P8 Jazz",
-        mp3:"http://live-icy.gss.dr.dk:8000/A/A22H.mp3"
+        mp3:"http://live-icy.gss.dr.dk/A/A22H.mp3"
       },
       {
         title:"Globus Guld (Kolding)",
@@ -53,7 +53,7 @@ var channelList = [
       },
       {
         title:"HeartBeats",
-        mp3:"http://airtime.heartbeats.dk:8000/stream"
+        mp3:"http://airtime.heartbeats.djj.dk:8000/320k"
       },
       {
         title:"Pop FM",
