@@ -15,6 +15,10 @@ function set_pagetitle() {
 }
 
 var channelList = [
+    {
+        title:"bitreich.org",
+        mp3:"http://bitreich.org:3232/live"
+      },
       {
         title:"DR P1",
         mp3:"http://live-icy.gss.dr.dk/A/A03H.mp3"
