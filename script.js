@@ -64,6 +64,10 @@ var channelList = [
         mp3:"http://stream.popfm.dk/pop128"
       },
       {
+        title: "Radar Radio",
+        mp3:   "http://soho.wavestreamer.com:5831/1/;stream.mp3"
+      },
+      {
         title:"Radio 24syv",
         mp3: "http://rrr.sz.xlcdn.com/?account=Radio24syv&file=ENC1_Web128&type=live&service=icecast&port=8000&output=pls"
       },
