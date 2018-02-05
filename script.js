@@ -73,7 +73,7 @@ var channelList = [
       },
       {
         title:"Radio Alfa (Østjylland)",
-        mp3:"http://netradio.radioalfa.dk/"
+        mp3:"http://netradio.radioalfa.dk/alfa"
       },
       {
         title:"Radio Monte Carlo FM",
