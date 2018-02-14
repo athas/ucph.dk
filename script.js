@@ -15,9 +15,13 @@ function set_pagetitle() {
 }
 
 var channelList = [
-    {
+      {
         title:"bitreich.org",
         mp3:"http://bitreich.org:3232/live"
+      },
+      {
+        title:"DEF CON Radio",
+        mp3:"http://somafm.com/defcon256.pls"
       },
       {
         title:"DR P1",
@@ -25,11 +29,11 @@ var channelList = [
       },
       {
         title:"DR P2",
-        mp3:"http://live-icy.gss.dr.dk/A/A04H.mp3" ,
+        mp3:"http://live-icy.gss.dr.dk/A/A04H.mp3"
       },
       {
         title:"DR P3",
-        mp3:"http://live-icy.gss.dr.dk/A/A05H.mp3" ,
+        mp3:"http://live-icy.gss.dr.dk/A/A05H.mp3"
       },
       {
         title:"DR P4 Midt & Vest",
@@ -60,16 +64,20 @@ var channelList = [
         mp3:"http://airtime.heartbeats.djj.dk:8000/320k"
       },
       {
+        title:"Lush",
+        mp3:"http://somafm.com/lush.pls"
+      },
+      {
         title:"Pop FM",
         mp3:"http://stream.popfm.dk/pop128"
       },
       {
-        title: "Radar Radio",
-        mp3:   "http://soho.wavestreamer.com:5831/1/;stream.mp3"
+        title:"Radar Radio",
+        mp3:"http://soho.wavestreamer.com:5831/1/;stream.mp3"
       },
       {
         title:"Radio 24syv",
-        mp3: "http://rrr.sz.xlcdn.com/?account=Radio24syv&file=ENC1_Web128&type=live&service=icecast&port=8000&output=pls"
+        mp3:"http://rrr.sz.xlcdn.com/?account=Radio24syv&file=ENC1_Web128&type=live&service=icecast&port=8000&output=pls"
       },
       {
         title:"Radio Alfa (Østjylland)",
