@@ -21,7 +21,7 @@ var channelList = [
       },
       {
         title:"DEF CON Radio",
-        mp3:"http://somafm.com/defcon256.pls"
+        mp3:"http://ice1.somafm.com/defcon-256-mp3"
       },
       {
         title:"DR P1",
@@ -65,7 +65,7 @@ var channelList = [
       },
       {
         title:"Lush",
-        mp3:"http://somafm.com/lush.pls"
+        mp3:"http://ice1.somafm.com/lush-128-aac"
       },
       {
         title:"Pop FM",
