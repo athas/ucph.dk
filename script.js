@@ -114,6 +114,10 @@ var channelList = [
       {
         title:"VRT Radio 2 Antwerpen",
         mp3:"http://mp3.streampower.be/ra2ant-high"
+      },
+      {
+        title:"Retro Radio",
+        mp3:"http://streammp3.retro-radio.dk/retro-mp3"
       }
 ];
 
