@@ -121,6 +121,14 @@ var channelList = [
       }
 ];
 
+var sortedChannels = channelList.sort(function(a,b){
+  var A = a.title.toUpperCase();
+  var B = b.title.toUpperCase();
+  if (A < B){return -1;}
+  if (A > B){return 1;}
+  return 0;
+});
+
 var defaultChannel =
         {
             title:"Radio Alfa (Østjylland)",
@@ -178,7 +186,7 @@ function startup() {
       autoBlur: false,
       smoothPlayBar: true,
       keyEnabled: false
-  }, channelList);
+  }, sortedChannels);
 
 
   $('#tab-container').easytabs({
