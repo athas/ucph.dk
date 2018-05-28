@@ -105,7 +105,7 @@ var channelList = [
       },
       {
         title:"The Lake",
-        mp3:"http://efterklang-sc.djj.dk:8000/;stream.mp3"
+        mp3:"http://hyades.shoutca.st:8627/;"
       },
       {
         title:"Universitetsradioen",
