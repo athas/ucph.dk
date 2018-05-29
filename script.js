@@ -61,7 +61,7 @@ var channelList = [
       },
       {
         title:"HeartBeats",
-        mp3:"http://airtime.heartbeats.djj.dk:8000/320k"
+        mp3:"https://airtime.heartbeats.dk:8443/320k"
       },
       {
         title:"Lush",
@@ -72,12 +72,20 @@ var channelList = [
         mp3:"http://stream.popfm.dk/pop128"
       },
       {
-        title:"Radar Radio",
-        mp3:"http://soho.wavestreamer.com:5831/1/;stream.mp3"
+        title:"Antenne Bayern",
+        mp3:"http://mp3channels.webradio.antenne.de/antenne"
+      },
+      {
+        title:"Radioplay - Danske 80'er Hits",
+        mp3:"http://edge-bauerdk-01-cr.sharp-stream.com/150_dk_aacp"
       },
       {
         title:"Radio 24syv",
         mp3:"http://live.taleradio.dk/Web"
+      },
+      {
+        title:"Reprezent 107.3FM",
+        mp3:"http://radio.canstream.co.uk:8022/live.mp3"
       },
       {
         title:"Radio Alfa (Østjylland)",
@@ -100,20 +108,20 @@ var channelList = [
         mp3:"http://netradio.radioviborg.dk/viborg"
       },
       {
-        title:"STROM:KRAFT",
-        mp3:"http://stream.stromkraftradio.fm:8012/;stream.mp3"
+        title:"STROM:KRAFT - Electronic Channel",
+        mp3:"http://37.61.204.209:8012/;"
+      },
+      {
+        title:"STROM:KRAFT - Techno Channel",
+        mp3:"http://37.61.204.209:8022/;"
       },
       {
         title:"The Lake",
         mp3:"http://hyades.shoutca.st:8627/;"
       },
       {
-        title:"Universitetsradioen",
-        mp3:"http://netradio.universitetsradioen.dk:8000/live64.ogg"
-      },
-      {
-        title:"VRT Radio 2 Antwerpen",
-        mp3:"http://mp3.streampower.be/ra2ant-high"
+        title:"Uniradioen",
+        mp3:"http://uniradio.out.airtime.pro:8000/uniradio_a"
       },
       {
         title:"Retro Radio",
