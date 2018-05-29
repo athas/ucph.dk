@@ -1,4 +1,4 @@
-@media screen and (max-width: 40.5em) {
+@media screen and (max-width: 768px) {
 	img#panda {
 		display: none
 	}
@@ -39,4 +39,12 @@ h2 {
 	body {
 		overflow-wrap: break-word;
 	}
+
+  div#ny_slide_overlay {
+      display:none;
+  }
+
+    .jp-progress, .jp-volume-controls, .jp-toggles, .jp-time-holder {
+      display: none;
+    }
 }
