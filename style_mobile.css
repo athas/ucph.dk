@@ -1,0 +1,42 @@
+@media screen and (max-width: 40.5em) {
+	img#panda {
+		display: none
+	}
+	ul.etabs {
+		display: flex;
+		flex-direction: horizontal;
+		width: 100%;
+	
+	}
+
+	ul.etabs li {
+    flex-grow: 1;
+	}
+	
+	li.tab a {
+		font-size:2.5vw;
+		line-height: 2em;
+	}
+	div#tabs1-forside div {
+		width: 100%;
+		float: unset;
+	}
+	
+	#pagetitle{
+		text-align: unset;
+  }
+h1 {
+    color: rgb(200,141, 8);
+    font-style: italic;
+    font-size: 2em;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 0;
+}
+	body {
+		overflow-wrap: break-word;
+	}
+}
