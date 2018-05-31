@@ -76,10 +76,6 @@ var channelList = [
         mp3:"http://mp3channels.webradio.antenne.de/antenne"
       },
       {
-        title:"Radioplay - Danske 80'er Hits",
-        mp3:"http://edge-bauerdk-01-cr.sharp-stream.com/150_dk_aacp"
-      },
-      {
         title:"Radio 24syv",
         mp3:"http://live.taleradio.dk/Web"
       },
