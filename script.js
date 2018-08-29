@@ -126,6 +126,10 @@ var channelList = [
       {
         title:"Retro Radio",
         mp3:"http://streammp3.retro-radio.dk/retro-mp3"
+      },
+      {
+        title:"say say - soulful hip-hop radio",
+        mp3:"https://streamer.radio.co/sb9163bff2/listen"
       }
 ];
 
