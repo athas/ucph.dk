@@ -124,6 +124,10 @@ var channelList = [
         mp3:"http://streammp3.retro-radio.dk/retro-mp3"
       },
       {
+        title:"Radio Alfas Juleradio",
+        mp3:"http://89.249.7.68/alfaevent"
+      },
+      {
         title:"say say - soulful hip-hop radio",
         mp3:"https://streamer.radio.co/sb9163bff2/listen"
       }
