@@ -76,10 +76,6 @@ var channelList = [
         mp3:"http://mp3channels.webradio.antenne.de/antenne"
       },
       {
-        title:"Radio 24syv",
-        mp3:"http://live.taleradio.dk/Web"
-      },
-      {
         title:"Reprezent 107.3FM",
         mp3:"http://radio.canstream.co.uk:8022/live.mp3"
       },
