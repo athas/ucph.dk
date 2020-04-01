@@ -126,6 +126,10 @@ var channelList = [
       {
         title:"say say - soulful hip-hop radio",
         mp3:"https://streamer.radio.co/sb9163bff2/listen"
+      },
+      {
+        title:"Radio LOUD",
+        mp3:"https://stream.radioloud.dk/loud128#.mp3"
       }
 ];
 
