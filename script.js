@@ -130,6 +130,10 @@ var channelList = [
       {
         title:"Radio LOUD",
         mp3:"https://stream.radioloud.dk/loud128#.mp3"
+      },
+      {
+        title:"Radio4",
+        mp3:"http://netradio.radio4.dk/radio4"
       }
 ];
 
