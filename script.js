@@ -129,7 +129,7 @@ var channelList = [
       },
       {
         title:"Intergalactic.fm Disco Fetish",
-        mp3:"http://radio.intergalactic.fm/2.m3u"
+        mp3:"http://radio.intergalactic.fm/2"
       },
 ];
 
