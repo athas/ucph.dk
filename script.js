@@ -100,14 +100,6 @@ var channelList = [
         mp3:"http://netradio.radioviborg.dk/viborg"
       },
       {
-        title:"STROM:KRAFT - Electronic Channel",
-        mp3:"http://37.61.204.209:8012/;"
-      },
-      {
-        title:"STROM:KRAFT - Techno Channel",
-        mp3:"http://37.61.204.209:8022/;"
-      },
-      {
         title:"The Lake",
         mp3:"http://hyades.shoutca.st:8627/;"
       },
