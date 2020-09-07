@@ -126,7 +126,11 @@ var channelList = [
       {
         title:"Radio4",
         mp3:"http://netradio.radio4.dk/radio4"
-      }
+      },
+      {
+        title:"Intergalactic.fm Disco Fetish",
+        mp3:"http://radio.intergalactic.fm/2.m3u"
+      },
 ];
 
 var sortedChannels = channelList.sort(function(a,b){
