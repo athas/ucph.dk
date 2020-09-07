@@ -61,7 +61,7 @@ var channelList = [
       },
       {
         title:"HeartBeats",
-        mp3:"https://airtime.heartbeats.dk:8443/320k"
+        mp3:"https://streaming02.zfast.co.uk/proxy/heartbea?mp=/stream"
       },
       {
         title:"Lush",
@@ -89,7 +89,7 @@ var channelList = [
       },
       {
         title:"Radio Monte Carlo 2",
-        mp3:"http://icecast.unitedradio.it/MC2.mp3"
+        mp3:"http://edge.singsingmusic.net/MC2.mp3"
       },
       {
         title:"Radio Riviera",
