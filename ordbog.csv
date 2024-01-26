@@ -1,4 +1,4 @@
-Fremmedord, Korrekt dansk betegnelse, Forklaring
+"Fremmedord", "Korrekt dansk betegnelse", "Forklaring"
 "angle bracket", "krokodillenæb, vinkelparantes",
 "approximation algorithm", "omtrentlig algoritme",
 "array", "tabel, række, geled",
@@ -53,7 +53,7 @@ Fremmedord, Korrekt dansk betegnelse, Forklaring
 "mutable", "foranderlig",
 "namespace", "navnerum",
 "network-attached storage", "netværkstilsluttet datalager",
-"non-fungible token", "enkeltstående værdibevis, unikumpolet, uombyttelig polet",
+"non-fungible token (NFT)", "enkeltstående værdibevis, unikumpolet, uombyttelig polet",
 "noop", "nøl",
 "opcode", "maskinbefaling, maskinordre",
 "open source software", "åbent programmel",
@@ -100,4 +100,4 @@ Fremmedord, Korrekt dansk betegnelse, Forklaring
 "whitespace", "blanktegn",
 "world wide web (www)", "det verdensomspændende spindel",
 "scrollbar", "rullebjælke",
-"zero-knowledge proof", "beregningsbevis i dølgsmål, smugberegningsbevis",
+"zero-knowledge proof", "smugberegningsbevis", "bevis af beregning, som fandt sted i dølgsmål"
