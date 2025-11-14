@@ -116,10 +116,6 @@ var channelList = [
         mp3:"http://89.249.7.68/alfaevent"
       },
       {
-        title:"Radio LOUD",
-        mp3:"https://stream.radioloud.dk/loud128#.mp3"
-      },
-      {
         title:"Radio4",
         mp3:"http://netradio.radio4.dk/radio4"
       },
